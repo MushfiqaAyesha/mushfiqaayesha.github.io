@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mushfiqa Ayesha - Game Developer</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-interface">
+      <header class="header">
+        <h1 class="persona-text" data-text="Mushfiqa Ayesha">
+          Mushfiqa Ayesha
+        </h1>
+        <p>Game Developer</p>
+      </header>
+
+      <nav class="sidebar">
+        <ul>
+          <li>
+            <button class="game-button" data-href="index.html">Home</button>
+          </li>
+          <li>
+            <button class="game-button" data-href="portfolio.html">
+              Portfolio
+            </button>
+          </li>
+
+          <li>
+            <button
+              class="game-button"
+              data-href="https://github.com/MushfiqaAyesha"
+            >
+              GitHub
+            </button>
+          </li>
+          <li>
+            <button
+              class="game-button"
+              data-href="https://www.linkedin.com/in/mushfiqa/"
+            >
+              LinkedIn
+            </button>
+          </li>
+          <li>
+            <button
+              class="game-button"
+              data-href="mailto:mushfiqaayesha@email.com"
+            >
+              Email
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <div id="about" class="section about">
+          <h2 class="persona-text" data-text="Player Profile: Mushfiqa Ayesha">
+            Player Profile: Mushfiqa Ayesha
+          </h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                Welcome to my game development universe! I'm Mushfiqa Ayesha, a
+                passionate Level 99 Game Developer with a quest to create
+                immersive and unforgettable gaming experiences.
+              </p>
+              <p>My skill tree includes:</p>
+              <ul>
+                <li>🎮 Game Design Mastery</li>
+                <li>💻 Code Wizardry</li>
+                <li>🎨 Artistic Vision</li>
+                <li>🧠 Problem-Solving Expertise</li>
+              </ul>
+              <p>
+                With a strong foundation in various game development tools and
+                technologies, I bring creativity and technical expertise to
+                every project. My mission is to push the boundaries of
+                interactive entertainment and create games that resonate with
+                players around the world.
+              </p>
+              <p>
+                Ready to embark on an epic game development journey? Let's team
+                up and create something extraordinary!
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2024 Mushfiqa Ayesha. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".game-button");
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const href = this.getAttribute("data-href");
+            if (href.startsWith("http") || href.startsWith("mailto")) {
+              window.open(href, "_blank");
+            } else {
+              window.location.href = href;
+            }
+          });
+
+          button.addEventListener("mouseover", function () {
+            this.style.transform = "scale(1.1) rotate(2deg)";
+          });
+
+          button.addEventListener("mouseout", function () {
+            this.style.transform = "scale(1) rotate(0deg)";
+          });
+        });
+
+        const personaTexts = document.querySelectorAll(".persona-text");
+        personaTexts.forEach((text) => {
+          text.addEventListener("mouseover", function () {
+            this.style.textShadow = "2px 2px 4px rgba(230, 0, 18, 0.7)";
+          });
+
+          text.addEventListener("mouseout", function () {
+            this.style.textShadow = "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

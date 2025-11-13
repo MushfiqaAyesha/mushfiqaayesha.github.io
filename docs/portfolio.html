@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mushfiqa Ayesha - Game Developer Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-interface">
+      <header class="header">
+        <h1 class="persona-text" data-text="Mushfiqa Ayesha">
+          Mushfiqa Ayesha
+        </h1>
+        <p>Game Developer</p>
+      </header>
+
+      <nav class="sidebar">
+        <ul>
+          <li>
+            <button class="game-button" data-href="index.html">Home</button>
+          </li>
+          <li>
+            <button class="game-button" data-href="portfolio.html">
+              Portfolio
+            </button>
+          </li>
+
+          <li>
+            <button
+              class="game-button"
+              data-href="https://github.com/MushfiqaAyesha"
+            >
+              GitHub
+            </button>
+          </li>
+          <li>
+            <button
+              class="game-button"
+              data-href="https://www.linkedin.com/in/mushfiqa/"
+            >
+              LinkedIn
+            </button>
+          </li>
+          <li>
+            <button
+              class="game-button"
+              data-href="mailto:mushfiqaayesha@email.com"
+            >
+              Email
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <h2 class="persona-text" data-text="My Game Portfolio">
+          My Game Portfolio
+        </h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <h3 class="persona-text" data-text="Aqua Adventures">
+              Aqua Adventures
+            </h3>
+            <video width="100%" height="auto" controls autoplay loop muted>
+              <source src="media/aqua_adventures.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p>
+              A collection game about marine animals using patterns, colors,
+              genetics, and upgrade mechanics. Features ShaderGraph textures and
+              procedural animation.
+            </p>
+            <ul>
+              <li>Implemented custom shaders using ShaderGraph</li>
+              <li>Designed procedural animation system for marine life</li>
+              <li>Created engaging upgrade mechanics</li>
+            </ul>
+          </div>
+
+          <div class="portfolio-item">
+            <h3 class="persona-text" data-text="Dream Runner">Dream Runner</h3>
+            <img src="media/ss.png" alt="Dream Runner Screenshot" />
+            <p>
+              An Endless Runner Unity Game with an atmospheric theme. Employs
+              procedural scene generation, dynamic weather, and day/night cycle.
+            </p>
+            <ul>
+              <li>Developed procedural level generation algorithm</li>
+              <li>Implemented dynamic weather system</li>
+              <li>Created smooth day/night cycle transitions</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2024 Mushfiqa Ayesha. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.querySelector("video");
+        if (video) {
+          video.playbackRate = 1.5;
+        }
+
+        const buttons = document.querySelectorAll(".game-button");
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const href = this.getAttribute("data-href");
+            if (href.startsWith("http") || href.startsWith("mailto")) {
+              window.open(href, "_blank");
+            } else {
+              window.location.href = href;
+            }
+          });
+
+          button.addEventListener("mouseover", function () {
+            this.style.transform = "scale(1.1) rotate(2deg)";
+          });
+
+          button.addEventListener("mouseout", function () {
+            this.style.transform = "scale(1) rotate(0deg)";
+          });
+        });
+
+        const personaTexts = document.querySelectorAll(".persona-text");
+        personaTexts.forEach((text) => {
+          text.addEventListener("mouseover", function () {
+            this.style.textShadow = "2px 2px 4px rgba(230, 0, 18, 0.7)";
+          });
+
+          text.addEventListener("mouseout", function () {
+            this.style.textShadow = "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
