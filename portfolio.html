@@ -30,6 +30,11 @@
               Portfolio
             </button>
           </li>
+          <li>
+            <button class="game-button" data-href="archive.html">
+              Archive
+            </button>
+          </li>
 
           <li>
             <button
@@ -64,26 +69,6 @@
         </h2>
         <div class="portfolio-grid">
           <div class="portfolio-item">
-            <h3 class="persona-text" data-text="Aqua Adventures">
-              Aqua Adventures
-            </h3>
-            <video width="100%" height="auto" controls autoplay loop muted>
-              <source src="media/aqua_adventures.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p>
-              A collection game about marine animals using patterns, colors,
-              genetics, and upgrade mechanics. Features ShaderGraph textures and
-              procedural animation.
-            </p>
-            <ul>
-              <li>Implemented custom shaders using ShaderGraph</li>
-              <li>Designed procedural animation system for marine life</li>
-              <li>Created engaging upgrade mechanics</li>
-            </ul>
-          </div>
-
-          <div class="portfolio-item">
             <h3 class="persona-text" data-text="Dream Runner">Dream Runner</h3>
             <img src="media/ss.png" alt="Dream Runner Screenshot" />
             <p>
@@ -106,11 +91,6 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const video = document.querySelector("video");
-        if (video) {
-          video.playbackRate = 1.5;
-        }
-
         const buttons = document.querySelectorAll(".game-button");
         buttons.forEach((button) => {
           button.addEventListener("click", function () {
@@ -145,3 +125,4 @@
     </script>
   </body>
 </html>
+
