@@ -228,6 +228,7 @@ main {
 
 .portfolio-actions {
   display: flex;
+  align-items: center;
   gap: 0.6rem;
   margin-top: 1.25rem;
   flex-wrap: wrap;
@@ -254,12 +255,6 @@ main {
 .btn-primary {
   background-color: var(--accent);
   color: #ffffff;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--ink);
-  border-color: var(--line);
 }
 
 /* Footer */
