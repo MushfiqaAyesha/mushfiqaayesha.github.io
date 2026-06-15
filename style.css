@@ -229,11 +229,16 @@ main {
 .portfolio-actions {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   margin-top: 1.25rem;
   flex-wrap: wrap;
 }
 
+.portfolio-actions img {
+  max-width: 100%;
+  height: auto;
+}
 .btn {
   display: inline-flex;
   align-items: center;
